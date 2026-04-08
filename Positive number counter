@@ -1,0 +1,11 @@
+numbers = ["67", "-9", "-89", "55", "24", "6", "-77"]
+count = 0
+for i in numbers:
+    num = int(i)
+    if num > 0:
+        print(f"{num} Is a positive number")
+        count = count + 1        
+    elif num < 0:
+        print(f"{num} Is a negative number")
+
+print("Total positive numbers are: ",count)
