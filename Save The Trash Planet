@@ -1,0 +1,58 @@
+pollution = 50
+print("Once upon a time, there was a distant planet buried under mountains of trash. The air was heavy, the oceans were dark, and no life could thrive. One day, you chose to travel there as a Guardian, determined to restore the planet and bring it back to life… but there is a monster, hidden in the trash.")
+print("\nLEVEL 1: 🗑️ THE TRASH CITY")
+print(f"The pollution level is {pollution}")
+name = input("What is your name Guardian?")
+print(f"\n🌍 Welcome, Guardian {name}")
+print("You step onto the planet and the ground is covered in trash.")
+print(f"Ok Guardian {name}, your job is to destroy all the pollution on this planet.")
+
+choice1 = input("\nDo you:\n1) ♻️ Recycle the trash\n2) 🚶 Ignore it\n ").lower()
+
+if choice1 == "1":
+    print("\nYou start cleaning the trash...")
+    print("✨ The ground begins to shine and the planet feels a little safer.")
+    pollution -= 10
+elif choice1 == "2":
+    print("\nYou walk past the trash...")
+    print("💀 The pollution grows stronger and so does the pollution monster.")
+    pollution += 15
+else:
+    print("\n⚠️ You hesitate... time passes and pollution spreads...")
+    pollution += 5
+print(f"The pollution level is {pollution}")
+
+
+
+print("\n🌊 LEVEL 2: THE POISON RIVER")
+print("You arrive at a dark river filled with toxic waste...")
+print("Dead fish float on the surface, and the water bubbles strangely.")
+print("As you step closer, something moves under the water...")
+print("👀 You feel like you're not alone.")
+print("You must act quickly before the river gets worse!")
+
+choice = input("""What will you do?
+1) Build a natural filter using rocks and plants
+2) Clear out all the dead fish
+3) Leave the river and continue your journey""")
+
+if choice == "1":
+    print("\n🌱 You carefully build a natural filter system.")
+    print("The water slowly becomes clearer...")
+    print("🐟 Some fish begin to swim again.")
+    pollution -= 10
+elif choice == "2":
+    print("\n🐟 You clean out the dead fishes.")
+    print("You finally finish, but it takes time...")
+    print("The river does not improve because there is still dirty water.")
+    pollution +=0
+elif choice == "3":
+    print("\n🚶 You walk away from the river...")
+    print("💀 The pollution spreads... and the pollution monster grows stronger.")
+    print("👑 A shadowy figure watches you from below.")
+    pollution += 15
+else:
+    print("\n⚠️ You hesitate too long...")
+    print("The poison spreads uncontrollably.")
+    pollution += 10
+print(f"The pollution level is {pollution}")
