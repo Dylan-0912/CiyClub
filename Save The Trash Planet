@@ -1,14 +1,12 @@
 pollution = 50
-print("Once upon a time, there was a distant planet buried under mountains of trash. The air was heavy, the oceans were dark, and no life could thrive. One day, you chose to travel there as a Guardian, determined to restore the planet and bring it back to life… but there is a monster, hidden in the trash.")
+print("Once upon a time, there was a distant planet with no humans somehow buried under mountains of trash. The air was heavy, the oceans were dark, and no life could thrive. One day, you chose to travel there as a Guardian, determined to restore the planet and bring it back to life… but there is a monster, hidden in the trash.")
 print("\nLEVEL 1: 🗑️ THE TRASH CITY")
 print(f"The pollution level is {pollution}")
 name = input("What is your name Guardian?")
 print(f"\n🌍 Welcome, Guardian {name}")
 print("You step onto the planet and the ground is covered in trash.")
-print(f"Ok Guardian {name}, your job is to destroy all the pollution on this planet.")
-
+print(f"Guardian {name}, your job is to destroy all the pollution on this planet.")
 choice1 = input("\nDo you:\n1) ♻️ Recycle the trash\n2) 🚶 Ignore it\n ").lower()
-
 if choice1 == "1":
     print("\nYou start cleaning the trash...")
     print("✨ The ground begins to shine and the planet feels a little safer.")
@@ -19,23 +17,21 @@ elif choice1 == "2":
     pollution += 15
 else:
     print("\n⚠️ You hesitate... time passes and pollution spreads...")
-    pollution += 5
+    pollution += 10
 print(f"The pollution level is {pollution}")
+print("🗑️Level 1 complete.")
+input("\nPress enter to continue")
 
-
+#NEXT LEVEL
 
 print("\n🌊 LEVEL 2: THE POISON RIVER")
-print("You arrive at a dark river filled with toxic waste...")
+print("You arrive at a dark river filled with ☢️toxic waste...")
 print("Dead fish float on the surface, and the water bubbles strangely.")
-print("As you step closer, something moves under the water...")
-print("👀 You feel like you're not alone.")
 print("You must act quickly before the river gets worse!")
-
 choice = input("""What will you do?
 1) Build a natural filter using rocks and plants
 2) Clear out all the dead fish
 3) Leave the river and continue your journey""")
-
 if choice == "1":
     print("\n🌱 You carefully build a natural filter system.")
     print("The water slowly becomes clearer...")
@@ -49,10 +45,118 @@ elif choice == "2":
 elif choice == "3":
     print("\n🚶 You walk away from the river...")
     print("💀 The pollution spreads... and the pollution monster grows stronger.")
-    print("👑 A shadowy figure watches you from below.")
     pollution += 15
 else:
     print("\n⚠️ You hesitate too long...")
     print("The poison spreads uncontrollably.")
     pollution += 10
 print(f"The pollution level is {pollution}")
+print("\n🌊Level 2 complete.")
+input("\nPress enter to continue")
+
+#NEXT LEVEL
+
+print("\n🌳LEVEL 3: THE BURNING FOREST🔥")
+print("You enter a forest covered in smoke and flames...")
+print("Trees are burning, and animals are trapped inside!")
+print("Your mission: Rescue the animals and stop the fire.")
+animals = ["🐰rabbit", "🦌deer", "🦊fox"]
+print("\nYou hear animals crying for help!")
+
+for animal in animals:
+    print(f"\nYou found a {animal} trapped near the fire!")
+    choice = input(f"Do you want to rescue the {animal}? yes/no: ").lower()
+    if choice == "yes":
+        print(f"✅ You rescued the {animal} safely!")
+    elif choice == "no":
+        print(f"⚠️ You left the {animal} behind...")
+        pollution += 5
+    else:
+        print(f"❓ You did not choose clearly and made the {animal} sad!")       
+print("\n🔥 Now you must stop the fire!")
+fire_choice = input("""
+What will you do?
+1) Use a bucket to get water from the river
+2) Use a big hose that gets water from the river
+3) Run away
+""").lower()
+if fire_choice == "1":
+    print("\n💧 You use a bucket with water to put out the flames.")
+    print("The water only puts out a small part of the flames and the forest still burns...")
+    pollution += 0
+elif fire_choice == "2":
+    print("\n🚿You use a big hose to clear out the fires.")
+    print("The water flows all over the forest making all the flames dissappear!")
+    pollution -= 10
+elif fire_choice == "3":
+    print("\n🏃 You run away from the forest.")
+    print("The fire spreads, and the Pollution Monster grows stronger...")
+    pollution += 15
+else:
+    print("⚠️ You hesitate for too long.")
+    print("The fire spreads deeper into the forest.")
+    pollution += 10
+
+print(f"The pollution level is {pollution}")
+print("\n🌳🔥Level 3 complete.")
+input("\nPress enter to continue")
+
+#NEW LEVEL
+
+print("\n🌫️ LEVEL 4: THE DARK SKY")
+print("You step into a large valley where the sky has turned completely black.")
+print("Birds can no longer fly through the toxic air.")
+print("Your mission: Reduce the smoke sources and restore the sky!")
+
+choice1 = input("""
+You discover an abandoned energy tower releasing dark smoke.
+What will you do?
+1) Shut down the tower
+2) Leave it running
+""").lower()
+
+if choice1 == "1":
+    print("\n⚡ The tower powers down, and the smoke begins to fade.")
+    pollution -= 5
+else:
+    print("\n💀 The tower continues spreading toxic smoke into the sky...")
+    pollution += 5
+print(f"The pollution level is {pollution}")
+
+choice2 = input("""
+You find giant piles of trash burning beneath the planets surface.
+What will you do?
+1) Extinguish the burning piles
+2) Ignore them
+""").lower()
+
+if choice2 == "1":
+    print("\n🪨 The burning piles of trash cool down, reducing the smoke.")
+    pollution -= 5
+else:
+    print("\n🔥 The crystals burn hotter and poison the air.")
+    pollution += 5
+print(f"The pollution level is {pollution}")
+
+choice3 = input("""
+You discover broken ancient Sky Trees that can clean the atmosphere.
+What will you do?
+1) Restore the Sky Trees
+2) Destroy them to keep
+""").lower()
+
+if choice3 == "1":
+    print("\n🌳 The Sky Trees glow with energy and purify the dark sky!")
+    pollution -= 5
+else:
+    print("\n⚠️ The atmosphere becomes unstable without the Sky Trees.")
+    pollution += 5
+print(f"The pollution level is {pollution}")
+
+
+# if pollution >= 30:
+ 
+# elif pollution >= 10:
+
+# else:
+
